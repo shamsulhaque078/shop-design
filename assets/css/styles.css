@@ -1,0 +1,165 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (max-width: 767px) {
+  .deskmenu{
+    display: none;
+  }
+
+
+  /* *mm */
+
+#checkbox {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease;
+}
+
+#mmenu {
+  display: none;
+  z-index: 100;
+  top: 49px;
+  position: absolute;
+  bottom: 50px;
+  width: 300px;
+  background-color: rgb(206, 206, 206);
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+}
+
+
+
+#checkbox:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-5px, -19px);
+    background: #cdcdcd;
+}
+
+#checkbox:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#checkbox:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, 15px);
+}
+
+#checkbox:checked + #mmenu {
+  display: block;
+  z-index: 108;
+  top: 49px;
+  position: fixed;
+  left: 0px;
+  bottom: 50px;
+  width: 300px;
+  background-color: rgb(206, 206, 206);
+  
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transition-duration: 40s;
+  transform: translate(0%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+/* mmmm */
+
+
+
+
+  .topm{
+    display: block;
+    z-index: 100;
+    top: 0px;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background-color: #010;
+    color: white;
+    
+  }
+
+  .mview{
+    width: 100%;
+  }
+  .mbuton{
+    width: 33.33%;
+    height: auto;
+    float: left;
+    padding: 10px;
+  }
+  .mlogo{
+    width: 33.33%;
+    height: auto;
+    float: left;
+    padding: 10px;
+  }
+  .msearch{
+    width: 33.33%;
+    height: auto;
+    float: left;
+    padding: 10px;
+  }
+
+  .bottomm{
+    display: block;
+    z-index: 100;
+    bottom: 0px;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+
+  .deskmenu{
+    display: block;
+  }
+
+  .topm{
+    display: none;
+  }
+
+  .bottomm{
+    display: none;
+  }
+}
+
+main > .topcon {
+  padding: 60px 15px 0;
+}
